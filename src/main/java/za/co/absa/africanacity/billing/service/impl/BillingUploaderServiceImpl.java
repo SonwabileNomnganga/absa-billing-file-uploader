@@ -22,7 +22,7 @@ public class BillingUploaderServiceImpl implements BillingUploaderService {
     @Override
     public void saveData(String data) throws FFPojoException {
 
-        log.info("to save to data base");
+        log.info("To save to database, the string " + data);
         if(data != null) {
             FFPojoHelper ffpojo = FFPojoHelper.getInstance();
             repository.saveAndFlush(ffpojo.createFromText(BillingRecord.class, data));

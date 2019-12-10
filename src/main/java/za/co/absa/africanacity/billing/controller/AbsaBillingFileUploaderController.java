@@ -34,7 +34,7 @@ public class AbsaBillingFileUploaderController {
             return Response.status(400).entity(INVALID_INPUT_DATA).build();
 
         try {
-            log.info(" to save");
+            log.info("To save");
             saveStream(inputStream);
             log.info("done saving");
 
@@ -51,7 +51,7 @@ public class AbsaBillingFileUploaderController {
 
     private void saveStream(InputStream inputStream) throws IOException, FFPojoException {
 
-        log.info("to save stream");
+        log.info("To save stream");
         InputStreamReader isr = new InputStreamReader(inputStream);
         BufferedReader in = new BufferedReader(isr);
 
